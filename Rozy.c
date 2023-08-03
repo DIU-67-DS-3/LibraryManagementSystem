@@ -51,3 +51,24 @@ void addBook(struct Book library[], int *num_books)
         printf("Book Added Successfully!!\n");
     }
 }
+// Function to delete a book from the library by title //
+void deleteBook(struct Book library[], int *num_books, char name[])
+{
+    int found = 0;
+    for (int i = 0; i < *num_books; i++)
+    {
+        if (strcmp(library[i].name, name) == 0)
+        {
+            // Move the last book in the array to the deleted position
+            library[i] = library[*num_books - 1];
+            (*num_books)--;
+            found = 1;
+            printf("Book \"%s\" deleted successfully!\n", name);
+            break;
+        }
+    }
+    if (!found)
+    {
+        printf("Book \"%s\" not found.\n", name);
+    }
+}
