@@ -42,9 +42,9 @@ int main()
                 addBook(library, &num_books);
                 break;
             case 2:
-                deleteBook(library, &num_books, );
-         printf("Enter the title of the book to delete: ");
-         scanf("%[\n]",title);
+                printf("Enter the title of the book to delete: ");
+                scanf("%[\n]",title);
+                deleteBook(library,&num_books,title);
                 
         }
 
