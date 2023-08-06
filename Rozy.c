@@ -16,6 +16,7 @@ struct Book
 // Declaration all functions in here//
 
 void addBook(struct Book library[], int *num_books);
+void deleteBook(struct Book library[], int *num_books, char name[]);
 
 // Main Function for call other functions//
 
@@ -23,8 +24,42 @@ int main()
 {
     struct Book library[MAX_BOOKS];
     int num_books = 0;
+    char title[100];
 
-    addBook(library, &num_books);
+    int choice;
+
+    do
+    {
+        printf("1. Add Book");
+        printf("2. Delete Book");
+
+        printf("Enter Your Choice: ");
+        scanf("%d", &choice);
+
+        switch(choice)
+        {
+            case 1:
+                addBook(library, &num_books);
+                break;
+            case 2:
+                deleteBook(library, &num_books, );
+         printf("Enter the title of the book to delete: ");
+         scanf("%[\n]",title);
+                
+        }
+
+
+    } while (choice == 0);
+    
+
+
+    // addBook(library, &num_books);
+    // char bookname to delete[100];
+    // printf("Enter the name of the book to delete: ");
+    // scanf("%s",Book name to delete);
+    // deletebook(library, &num_books,bookname to delete);
+
+    return 0;
 }
 
 // Add books in library//
@@ -52,6 +87,7 @@ void addBook(struct Book library[], int *num_books)
     }
 }
 // Function to delete a book from the library by title //
+
 void deleteBook(struct Book library[], int *num_books, char name[])
 {
     int found = 0;
