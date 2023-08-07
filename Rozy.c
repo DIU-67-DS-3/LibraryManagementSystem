@@ -50,15 +50,6 @@ int main()
 
 
     } while (choice == 0);
-    
-
-
-    // addBook(library, &num_books);
-    // char bookname to delete[100];
-    // printf("Enter the name of the book to delete: ");
-    // scanf("%s",Book name to delete);
-    // deletebook(library, &num_books,bookname to delete);
-
     return 0;
 }
 
